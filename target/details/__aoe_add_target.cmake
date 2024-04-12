@@ -153,7 +153,7 @@ macro(__aoe_add_target type)
     __aoe_target_property(${target} DEPENDENCIES SET ${config_DEPEND} ${config_PRIVATE_DEPEND} ${config_FORCE_DEPEND})
 
     # Set the build order dependencies
-    set(build_depends ${config_DEPEND} ${config_PRIVATE_DEPEND} ${config_FORCE_DEPEND} ${config_BUILD_DEPEND})
+    set(build_depends ${config_DEPEND} ${config_FORCE_DEPEND} ${config_PRIVATE_DEPEND} ${config_BUILD_DEPEND})
 
     if (NOT "${build_depends}" STREQUAL "")
         add_dependencies(${target} ${build_depends})
